@@ -1,6 +1,8 @@
 package com.funmaths.numbergame.fizzbuzz;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Utility class to map a range of numbers to fizz buzz series.
@@ -12,6 +14,18 @@ import java.util.List;
  */
 public class FizzBuzzUtil {
     public List<String> fizzBuzzSeries(int start, int end) {
-        return null;
+        return IntStream.rangeClosed(start, end).mapToObj(n -> String.valueOf(n)).map(n -> fizz(n))
+                .collect(Collectors.toList());
+    }
+
+    private String fizz(String n) {
+        try {
+            if (Integer.parseInt(n) % 3 == 0) {
+                return "Fizz";
+            }
+        } catch (NumberFormatException nfe) {
+            // swallow
+        }
+        return n;
     }
 }
