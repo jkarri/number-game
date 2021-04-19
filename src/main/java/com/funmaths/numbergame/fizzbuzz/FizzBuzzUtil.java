@@ -14,14 +14,38 @@ import java.util.stream.IntStream;
  */
 public class FizzBuzzUtil {
     public List<String> fizzBuzzSeries(int start, int end) {
-        return IntStream.rangeClosed(start, end).mapToObj(n -> String.valueOf(n)).map(n -> fizz(n))
+        return IntStream.rangeClosed(start, end)
+                .mapToObj(n -> String.valueOf(n))
+                .map(n -> fizz(n))
+                .map(n -> buzz(n))
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Returns if a number is fizzy (i.e. divisible by 3)
+     * @param n input number
+     * @return Fizz or the original number
+     */
     private String fizz(String n) {
         try {
             if (Integer.parseInt(n) % 3 == 0) {
                 return "Fizz";
+            }
+        } catch (NumberFormatException nfe) {
+            // swallow
+        }
+        return n;
+    }
+
+    /**
+     * Returns if a number is buzzy (i.e. divisible by 5)
+     * @param n input number
+     * @return Buzz or the original number
+     */
+    private String buzz(String n) {
+        try {
+            if (Integer.parseInt(n) % 5 == 0) {
+                return "Buzz";
             }
         } catch (NumberFormatException nfe) {
             // swallow
