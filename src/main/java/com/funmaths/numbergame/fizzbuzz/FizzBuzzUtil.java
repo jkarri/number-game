@@ -13,9 +13,16 @@ import java.util.stream.IntStream;
  *  A number is not changed when it does not match any of the above conditions
  */
 public class FizzBuzzUtil {
+    /**
+     * Fetches the fizz buzz series for the given range of numbers.
+     * @param start start of the range, inclusive
+     * @param end end of the range, inclusive
+     * @return fizz buzz series
+     */
     public List<String> fizzBuzzSeries(int start, int end) {
         return IntStream.rangeClosed(start, end)
                 .mapToObj(n -> String.valueOf(n))
+                .map(n -> fizzbuzz(n))
                 .map(n -> fizz(n))
                 .map(n -> buzz(n))
                 .collect(Collectors.toList());
@@ -51,5 +58,21 @@ public class FizzBuzzUtil {
             // swallow
         }
         return n;
+    }
+
+    private String fizzbuzz(String n) {
+        try {
+            if (Integer.parseInt(n) % 3 == 0 && Integer.parseInt(n) % 5 == 0) {
+                return "FizzBuzz";
+            }
+        } catch (NumberFormatException nfe) {
+            // swallow
+        }
+        return n;
+    }
+
+    public static void main(String[] args) {
+        FizzBuzzUtil fizzBuzzUtil = new FizzBuzzUtil();
+        fizzBuzzUtil.fizzBuzzSeries(1, 100).forEach(System.out::println);
     }
 }
