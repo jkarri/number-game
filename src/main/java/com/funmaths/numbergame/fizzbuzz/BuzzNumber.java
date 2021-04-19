@@ -1,7 +1,7 @@
 package com.funmaths.numbergame.fizzbuzz;
 
 /**
- * A number if buzz if it is divisible by 5.
+ * A number is buzz if it is divisible by 5.
  */
 public class BuzzNumber implements GameNumber {
     @Override
