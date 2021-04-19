@@ -6,7 +6,7 @@ package com.funmaths.numbergame.fizzbuzz;
  * A number can be transformed to either fizz, buzz or fizzbuzz if it is valid
  * Else the number is retained.
  */
-public interface GameNumber {
+public interface GameNumberFeature {
     /**
      * A number can be a valid game number if it satisfies the properties of fizz, buzz or both.
      * @param number the input number

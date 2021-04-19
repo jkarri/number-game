@@ -8,7 +8,7 @@ class FizzBuzzNumberTest {
 
     @Test
     void testThatNumberFifteenIsFizzBuzz() {
-        FizzBuzzNumber fizzBuzzNumber = new FizzBuzzNumber();
+        FizzBuzzNumberFeature fizzBuzzNumber = new FizzBuzzNumberFeature();
 
         boolean isFizzBuzz = fizzBuzzNumber.isValidGameNumber(15);
 
@@ -17,7 +17,7 @@ class FizzBuzzNumberTest {
 
     @Test
     void testThatNumberTenIsNotFizzBuzz() {
-        FizzBuzzNumber fizzBuzzNumber = new FizzBuzzNumber();
+        FizzBuzzNumberFeature fizzBuzzNumber = new FizzBuzzNumberFeature();
 
         boolean isFizzBuzz = fizzBuzzNumber.isValidGameNumber(10);
 
@@ -26,7 +26,7 @@ class FizzBuzzNumberTest {
 
     @Test
     void testThatNumberThirtyFiveIsNotFizzBuzz() {
-        FizzBuzzNumber fizzBuzzNumber = new FizzBuzzNumber();
+        FizzBuzzNumberFeature fizzBuzzNumber = new FizzBuzzNumberFeature();
 
         boolean isFizzBuzz = fizzBuzzNumber.isValidGameNumber(35);
 

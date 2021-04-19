@@ -10,7 +10,7 @@ class RetainedNumberTest {
 
     @Test
     void testThatNumberOneIsValid() {
-        RetainedNumber retainedNumber = new RetainedNumber();
+        RetainedNumberFeature retainedNumber = new RetainedNumberFeature();
 
         boolean isValid = retainedNumber.isValidGameNumber(1);
 
@@ -19,7 +19,7 @@ class RetainedNumberTest {
 
     @Test
     void testThatNumberOneIsTransformedToItsStringLiteral() {
-        RetainedNumber retainedNumber = new RetainedNumber();
+        RetainedNumberFeature retainedNumber = new RetainedNumberFeature();
 
         String result = retainedNumber.transform(1);
 
@@ -28,7 +28,7 @@ class RetainedNumberTest {
 
     @Test
     void testThatNumberTwoIsValid() {
-        RetainedNumber retainedNumber = new RetainedNumber();
+        RetainedNumberFeature retainedNumber = new RetainedNumberFeature();
 
         String result = retainedNumber.transform(2);
 
@@ -37,7 +37,7 @@ class RetainedNumberTest {
 
     @Test
     void testThatAnyNumberIsValid() {
-        RetainedNumber retainedNumber = new RetainedNumber();
+        RetainedNumberFeature retainedNumber = new RetainedNumberFeature();
 
         IntStream.rangeClosed(1, 50).forEach(n -> {
             String result = retainedNumber.transform(n);

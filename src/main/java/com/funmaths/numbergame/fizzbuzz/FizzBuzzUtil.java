@@ -13,6 +13,8 @@ import java.util.stream.IntStream;
  *  A number is not changed when it does not match any of the above conditions
  */
 public class FizzBuzzUtil {
+    private List<GameNumberFeature> gameNumberFeatures;
+
     /**
      * Fetches the fizz buzz series for the given range of numbers.
      * @param start start of the range, inclusive

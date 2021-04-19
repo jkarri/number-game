@@ -9,7 +9,7 @@ class FizzNumberTest {
     @Test
     void testThatNumberThreeIsFizzy() {
         // Given
-        FizzNumber fizzNumber = new FizzNumber();
+        FizzNumberFeature fizzNumber = new FizzNumberFeature();
         // When
         boolean isFizzy = fizzNumber.isValidGameNumber(3);
 
@@ -19,7 +19,7 @@ class FizzNumberTest {
     @Test
     void testThatNumberOneIsNotFizzy() {
         // Given
-        FizzNumber fizzNumber = new FizzNumber();
+        FizzNumberFeature fizzNumber = new FizzNumberFeature();
         // When
         boolean isFizzy = fizzNumber.isValidGameNumber(1);
 
@@ -29,7 +29,7 @@ class FizzNumberTest {
     @Test
     void testThatNumberNinetyThreeIsFizzy() {
         // Given
-        FizzNumber fizzNumber = new FizzNumber();
+        FizzNumberFeature fizzNumber = new FizzNumberFeature();
         // When
         boolean isFizzy = fizzNumber.isValidGameNumber(93);
 

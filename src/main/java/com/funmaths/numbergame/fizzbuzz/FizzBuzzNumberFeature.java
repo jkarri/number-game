@@ -1,16 +1,16 @@
 package com.funmaths.numbergame.fizzbuzz;
 
 /**
- * A number is buzz if it is divisible by 5.
+ * A number is fizzbuzz if it is both divisible by 3 and 5.
  */
-public class BuzzNumber implements GameNumber {
+public class FizzBuzzNumberFeature implements GameNumberFeature {
     @Override
     public boolean isValidGameNumber(int number) {
-        return number % 5 == 0;
+        return number % 15 == 0;
     }
 
     @Override
     public String transform(int number) {
-        return "Buzz";
+        return "FizzBuzz";
     }
 }

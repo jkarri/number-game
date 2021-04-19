@@ -9,7 +9,7 @@ class BuzzNumberTest {
     @Test
     void testThatNumberThreeIsBuzzy() {
         // Given
-        BuzzNumber buzzNumber = new BuzzNumber();
+        BuzzNumberFeature buzzNumber = new BuzzNumberFeature();
         // When
         boolean isBuzzy = buzzNumber.isValidGameNumber(5);
         // Then
@@ -19,7 +19,7 @@ class BuzzNumberTest {
     @Test
     void testThatNumberOneIsNotBuzzy() {
         // Given
-        BuzzNumber buzzNumber = new BuzzNumber();
+        BuzzNumberFeature buzzNumber = new BuzzNumberFeature();
         // When
         boolean isBuzzy = buzzNumber.isValidGameNumber(1);
         // Then
@@ -29,7 +29,7 @@ class BuzzNumberTest {
     @Test
     void testThatNumberNinetyThreeIsBuzzy() {
         // Given
-        BuzzNumber buzzNumber = new BuzzNumber();
+        BuzzNumberFeature buzzNumber = new BuzzNumberFeature();
         // When
         boolean isBuzzy = buzzNumber.isValidGameNumber(25);
 
