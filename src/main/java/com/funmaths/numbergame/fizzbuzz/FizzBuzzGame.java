@@ -21,9 +21,11 @@ public class FizzBuzzGame {
      */
     public FizzBuzzGame() {
         this.gameNumberFeatures = new ArrayList<>();
-        this.gameNumberFeatures.add(new FizzBuzzNumberFeature());
-        this.gameNumberFeatures.add(new FizzNumberFeature());
-        this.gameNumberFeatures.add(new BuzzNumberFeature());
+        FizzNumberFeature fizzNumberFeature = new FizzNumberFeature();
+        BuzzNumberFeature buzzNumberFeature = new BuzzNumberFeature();
+        this.gameNumberFeatures.add(new FizzBuzzNumberFeature(fizzNumberFeature, buzzNumberFeature));
+        this.gameNumberFeatures.add(fizzNumberFeature);
+        this.gameNumberFeatures.add(buzzNumberFeature);
     }
 
     /**
