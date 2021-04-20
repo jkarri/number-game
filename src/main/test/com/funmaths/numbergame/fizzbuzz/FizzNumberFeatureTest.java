@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FizzNumberTest {
+class FizzNumberFeatureTest {
 
     @Test
     void testThatNumberThreeIsFizzy() {
@@ -32,6 +32,16 @@ class FizzNumberTest {
         FizzNumberFeature fizzNumber = new FizzNumberFeature();
         // When
         boolean isFizzy = fizzNumber.isValidGameNumber(93);
+
+        assertTrue(isFizzy);
+    }
+
+    @Test
+    void testThatNumberThirtyOneIsFizzy() {
+        // Given
+        FizzNumberFeature fizzNumber = new FizzNumberFeature();
+        // When
+        boolean isFizzy = fizzNumber.isValidGameNumber(31);
 
         assertTrue(isFizzy);
     }

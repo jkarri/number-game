@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class RetainedNumberTest {
+class RetainedNumberFeatureTest {
 
     @Test
     void testThatNumberOneIsValid() {

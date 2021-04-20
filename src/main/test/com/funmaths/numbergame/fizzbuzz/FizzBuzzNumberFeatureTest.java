@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FizzBuzzNumberTest {
+class FizzBuzzNumberFeatureTest {
 
     @Test
     void testThatNumberFifteenIsFizzBuzz() {

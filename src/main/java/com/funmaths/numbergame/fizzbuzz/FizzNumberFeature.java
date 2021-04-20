@@ -6,7 +6,7 @@ package com.funmaths.numbergame.fizzbuzz;
 public class FizzNumberFeature implements GameNumberFeature {
     @Override
     public boolean isValidGameNumber(int number) {
-        return number % 3 == 0;
+        return number % 3 == 0 || String.valueOf(number).contains("3");
     }
 
     @Override

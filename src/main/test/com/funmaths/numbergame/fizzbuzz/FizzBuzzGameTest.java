@@ -26,6 +26,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
      void testThatFizzBuzzSeriesWithFizzAndBuzzAndFizzBuzzIsFetched() {
          List<String> fizzBuzzSeries = fizzBuzzGame.fizzBuzzSeries(1, 15);
          assertEquals(Lists.newArrayList("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11",
-                 "Fizz", "13", "14", "FizzBuzz"), fizzBuzzSeries);
+                 "Fizz", "Fizz", "14", "FizzBuzz"), fizzBuzzSeries);
      }
 }
